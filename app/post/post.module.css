@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.title {
+    margin: 1rem;
+    padding: 1rem;
+}

@@ -1,0 +1,13 @@
+.article {
+    margin: 1rem 0;
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.listTitle {
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}

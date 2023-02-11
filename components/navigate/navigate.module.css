@@ -1,0 +1,31 @@
+.ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .ul {
+        font-size: 0.8rem
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .ul {
+        font-size: 1.3rem
+    }
+}
+
+.nav {
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.link {
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
