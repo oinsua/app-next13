@@ -1,4 +1,5 @@
 import { fetchPost } from '@/services/fetch'
+import Link from 'next/link';
 import React from 'react'
 import Button from '../button';
 import classes from './listPost.module.css';
@@ -17,8 +18,10 @@ async function ListPost() {
       {
         posts.slice(0,10).map(({id, title, body}:Post) => (
             <article key={id} className={classes.article}>
-                <h2 className={classes.listTitle}>{title}</h2>
-                <p>{body}</p>
+                <Link href={`/post/[id]`} as={`/post/${id}`}>
+                    <h2 className={classes.listTitle}>{title}</h2>
+                    <p>{body}</p>
+                </Link>
                 <Button />
             </article>
         ))
