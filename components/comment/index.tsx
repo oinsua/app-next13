@@ -13,17 +13,19 @@ export default async function CommentsPost({ id }: {id: string}) {
     const comments = await fetchCommentsPost({id});
 
   return (
-    <>
+    <ol style={{margin: "1rem", padding: "1rem"}}>
       {
         comments.map(({id, name, email, body}: Comments) => (
-            <article key={id} className={classes.article}>
-                <h3 style={{marginBottom: "1rem"}}>{name}</h3>
+            <li key={id}>
+              <article className={classes.article} >
+                <h4 style={{marginBottom: "1rem"}}>{name}</h4>
                 <p style={{marginBottom: "1rem", fontStyle: "italic"}}>{email}</p>
                 <p style={{marginBottom: "1rem"}}>{body}</p>
-            </article>
+              </article>
+            </li>
         ))
       }
-    </>
+    </ol>
   )
 }
 

@@ -24,7 +24,12 @@ export function fetchDetailsPost({ id }: props): Promise<any> {
                 .then(res => res.json());
 };
 
-export function fetchCommentsPost({ id }: props): Promise<any> {
+export async function fetchCommentsPost({ id }: props): Promise<any> {
+
+        await new Promise(resolver => setTimeout(resolver, 3000));
+
+        /* throw new Error('Error loading Comments') */
+
         return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, { next: { revalidate: 60 } })
                 .then(res => res.json());
 };

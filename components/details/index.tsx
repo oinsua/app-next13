@@ -9,13 +9,11 @@ export default async function DetailsPost({ id }: {id: string}) {
     
   return (
     <>
-            <article className={classes.article}>
-                    <h2 className={classes.listTitle}>{detilsPost.title}</h2>
-                    <p>{detilsPost.body}</p>
-                    <div style={{margin: "1rem"}}>
-                        <Link href={`/post/${id}/comments`} className={classes.commentsText}>Comments</Link>
-                    </div>
-            </article>
+        <h2 className={classes.listTitle}>{detilsPost.title}</h2>
+        <p>{detilsPost.body}</p>
+        <div style={{margin: "1rem"}}>
+            <Link href={`/post/${id}/comments`} className={classes.commentsText}>Comments</Link>
+        </div>
     </>
   )
 }
